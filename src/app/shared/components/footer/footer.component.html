@@ -1,0 +1,48 @@
+<!-- src/app/footer/footer.component.html -->
+<footer class="footer mt-auto py-3 text-white">
+    <div class="container text-center">
+      <div class="row mb-3">
+        <div class="col-md-4 mb-3">
+          <h6 class="font-weight-bold">{{InformacionContacto}}</h6>
+          <div class="row">
+            <a class="nav-link" (click)="scrollTop()" [routerLink]="['/', idiomaSeleccionado, 'contacto']">
+                <img src="assets/escribenos.png" alt="Libreta icono" class="footer-icon" />
+                {{Escribenos}}
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="font-weight-bold">{{SobreWeb}}</h6>
+          <a class="nav-link mb-1" (click)="scrollTop()" [routerLink]="['/', idiomaSeleccionado, 'politica-de-cookies']">
+            <img src="assets/cookie.png" alt="Galleta icono" class="footer-icon" />
+            {{PoliticaCookies}}
+          </a>
+          <a class="nav-link" (click)="scrollTop()" [routerLink]="['/', idiomaSeleccionado, 'politica-de-privacidad']">
+            <img src="assets/private.png" alt="Privacidad icono" class="footer-icon" />
+            {{PoliticaPrivacidad}}
+          </a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <h6 class="font-weight-bold">{{Idiomas}}</h6>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle custom-dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/idiomas.png" alt="Cambio idioma icono" class="footer-icon" />
+                {{lenguajeSeleccionado}}
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" (click)="selectLanguage('es')">Español</a></li>
+                <li><a class="dropdown-item" (click)="selectLanguage('en')">English</a></li>
+                <!-- Add more languages as needed -->
+              </ul>
+            </div>
+        </div>
+      </div>
+    <div class="row">
+      <a class="nav-link" (click)="scrollTop()" [routerLink]="['/', idiomaSeleccionado]">
+        <h6 class="font-weight-bold a">{{SobreNosotros}}</h6>
+      </a>
+        <p>{{SobreNosotrosDescripcion}}</p>
+    </div>
+  </div>
+</footer>
+  

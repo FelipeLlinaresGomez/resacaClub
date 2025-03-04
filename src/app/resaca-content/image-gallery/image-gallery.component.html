@@ -1,0 +1,21 @@
+<div class="d-flex align-items-center justify-content-between">
+    <!-- Left Arrow -->
+    <button class="btn btn-primary arrow-btn arrow-btn-left" (click)="previousPage()" >
+        <i class="bi bi-arrow-left"></i>
+    </button>
+
+    <!-- Image Gallery -->
+    <div class="div-image">
+        <img [src]="selectedImage" class="img-custom" alt="Image">
+        <a [href]="selectedImage" [download]="getFileName(selectedImage)" class="download-btn">
+            <div class="download-icon-wrapper">
+                <img src="assets/download.png" alt="Download" class="download-icon">
+            </div>
+        </a>
+    </div>
+
+    <!-- Right Arrow -->
+    <button class="btn btn-primary arrow-btn arrow-btn-right" (click)="nextPage()">
+        <i class="bi bi-arrow-right"></i>
+    </button>
+</div> 

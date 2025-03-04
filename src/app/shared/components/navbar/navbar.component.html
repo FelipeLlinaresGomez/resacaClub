@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg custom-navbar navbar-light-brand-hover-color">
+    <div class="container-fluid px-3">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon navbar-light boton-toggler"></span>
+      </button>
+      <a class="navbar-brand" (click)="collapseNavbarScrollTop()" [routerLink]="['/', idiomaSeleccionado]">
+        <img src="assets/LOGO_positivo.png" alt="Logo" width="75" height="24" class="d-inline-block align-text-top">
+      </a>
+      <a class="navbar-instagram" (click)="collapseNavbarScrollTop()" href="https://www.instagram.com/resaca.club" target="_blank">
+        <img src="assets/instagram-icon.png" alt="Instagram logo" width="30" height="30" class="d-inline-block align-text-top">
+      </a>
+      
+      <div class="collapse navbar-collapse justify-content-end mt-2" id="navbarNav" #navbarNav>
+        <ul class="navbar-nav">
+          <!-- <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/', idiomaSeleccionado, 'galeria']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{Galeria}}</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" (click)="scrollToSection('sectionEventos')">{{Eventos}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scrollToSection('sectionGaleria')">{{Galeria}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="scrollToSection('sectionTienda')">{{Tienda}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="collapseNavbarScrollTop()" [routerLink]="['/', idiomaSeleccionado, 'contacto']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{Contacto}}</a>
+          </li>
+        </ul>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle custom-dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <img [src]="'assets/' + paisSeleccionado + '.png'" alt="Cambio idioma icono" class="footer-icon" width="24" height="24"/>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton">
+            <li>
+              <a class="dropdown-item" (click)="selectLanguage('es')">
+                <img src="assets/spain.png" alt="Bandera españa icono" class="footer-icon" width="24" height="24" />
+                Español
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="selectLanguage('en')">
+                <img src="assets/ingles.png" alt="Bandera reino unido icono" class="footer-icon" width="24" height="24" />
+                English
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</nav>

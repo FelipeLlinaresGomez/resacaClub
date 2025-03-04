@@ -1,0 +1,9 @@
+<!-- src/app/card/card.component.html -->
+<div class="card">
+    <img [src]="image" class="card-img-top" alt="Card Image">
+    <div class="card-body">
+      <h5 *ngIf="mostrarListaReservas" class="card-title">GUEST LIST - {{ title }}</h5>
+      <h5 *ngIf="!mostrarListaReservas" class="card-title">{{ title }}</h5>
+    </div>
+  </div>
+  

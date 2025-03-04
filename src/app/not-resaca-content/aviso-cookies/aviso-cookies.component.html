@@ -1,0 +1,10 @@
+<div class="cookie-notice" *ngIf="!cookieConsent">
+    <div class="col-12">
+        {{UsamosCookies}}
+        <a class="nav-link" [routerLink]="['/', idiomaSeleccionado, 'politica-de-cookies']">
+            {{MasInformacion}}
+        </a>
+        <button (click)="acceptCookies()">{{Aceptar}}</button>
+    </div>
+</div>
+  

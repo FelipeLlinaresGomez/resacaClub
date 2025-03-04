@@ -1,0 +1,60 @@
+<!-- src/app/contact/contact.component.html -->
+<div class="container mt-5 mb-5 evento">
+    <p [innerHTML]="DescripcionEvento"></p>
+    <br>
+    <div class="card-entradas d-flex align-items-start" *ngIf="mostrarCompraEntradas" (click)="irAdelante()">
+      <h2>{{nombreEnlaceTickets}}</h2>
+      <button class="btn btn-secondary">&#8594;</button>
+    </div>
+    <br>
+    <div id="map" class="mapa-evento"></div>
+    <br>
+    <h2 class="h2extra" *ngIf="mostrarListaReservas">{{ListaInvitados}}</h2>
+    <form *ngIf="mostrarListaReservas" [formGroup]="contactForm" (ngSubmit)="apuntarInvitado($event)" #ngform="ngForm">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">{{Nombre}} *</label>
+        <input type="text" id="nombre" class="form-control" formControlName="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">{{Correo}} *</label>
+        <input type="email" id="email" class="form-control" formControlName="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">{{Telefono}} *</label>
+        <input type="text" id="telefono" class="form-control" formControlName="telefono" required>
+      </div>
+
+      <!-- Checkbox no obligatorio -->
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="aceptaComunicaciones" formControlName="aceptaComunicaciones">
+        <label class="form-check-label" for="aceptaComunicaciones">
+          {{AceptoComunicaciones}}
+        </label>
+      </div>
+
+      <button type="submit" [disabled]="cargando() || ngform.invalid" class="btn btn-primary">{{Enviar}}</button>
+    </form>
+
+    <p class="mt-4 mb-0" *ngIf="mostrarListaReservas" [innerHTML]="HacerClick"></p>
+    <a class="nav-link" *ngIf="mostrarListaReservas" [routerLink]="['/', idiomaSeleccionado, 'politica-de-privacidad']">
+      {{MasInformacion}}
+    </a>
+
+  </div>
+
+  <!-- Overlay card for loading and success messages -->
+<div *ngIf="mostrandoCard()" class="overlay">
+  <div class="card-evento">
+      <button *ngIf="mostrandoCard() && !cargando()" (click)="closeOverlay()" class="close-btn">&times;</button>
+      <div class="card-body-evento text-center">
+        @if(cargando()){
+          <p>Loading</p>
+        }@else if(exito()){
+          <p>You are on the guest list 🧡</p>
+        } @else if (exito() === false){
+          <p>Error getting on the list</p>
+        }
+      </div>
+  </div>
+</div>
+  

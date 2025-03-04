@@ -1,0 +1,48 @@
+.cookies{
+    margin-top: 30px;
+}
+
+.cookies h2 {
+    color: #F05801;
+  }
+  
+.cookies h3 {
+    color: #F05801;
+}
+
+.cookies h4 {
+    color: #ffbe81;
+}
+
+/* Ensure the table takes the full width of its container */
+.full-width-table {
+    width: 100%; /* Full width of the parent container */
+    border-collapse: collapse; /* Optional: to ensure borders are handled nicely */
+    display: block; /* Add display block to handle overflow */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+  
+  /* Optional: Styling for table headers and cells */
+  .full-width-table th, 
+  .full-width-table td {
+    border: 1px solid #ddd; /* Border color */
+    padding: 8px; /* Padding for readability */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Optional: Styling for the table header */
+  .full-width-table th {
+    background-color: #ffbe81; /* Background color for header */
+    font-weight: bold; /* Bold text for header */
+  }
+
+.cookies a {
+    font-size: 1rem;
+    color: #F05801; /* Optional: link color */
+    text-decoration: none;
+  }
+  
+  .cookies a:hover {
+    color: #ffbe81; /* Change color on hover (light gray in this example) */
+    text-decoration: none;
+  }

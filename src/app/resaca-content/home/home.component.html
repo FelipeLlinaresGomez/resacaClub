@@ -1,0 +1,55 @@
+<video class="video-player" autoplay loop playsinline preload="auto">
+  <h1 >{{pageTitle}}</h1>
+  <source src="assets/{{videoSource}}.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+ 
+<div id="sectionEventos" class="container mt-5 mb-5 home">
+  <h2>{{proximosEventos}}</h2>
+  <p *ngIf="errorEventos()">Ha ocurrido un error obteniendo los eventos.</p>
+  <p *ngIf="cargandoEventos()">Loading</p>
+  <p *ngIf="cards.length === 0 && !cargandoEventos() && !errorEventos()">Coming soon...</p>
+  <div *ngIf="cards.length > 0" class="card-body">
+    <!-- src/app/card-grid/card-grid.component.html -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 mb-4 mt-3" *ngFor="let card of cards">
+          <app-card-evento (click)="onEventoClicked(card.nombreId)" [title]="card.title" [description]="card.description" [image]="card.image" [mostrarListaReservas]="card.mostrarListaReservas"></app-card-evento>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sectionGaleria" class="container galeria">
+  <h2>{{Galeria}}</h2>
+  <p *ngIf="errorImagenes()">Ha ocurrido un error obteniendo las imágenes.</p>
+  <p *ngIf="cargandoImagenes()">Loading</p>
+  <p *ngIf="images.length === 0 && !cargandoImagenes() && !errorImagenes()">Coming soon...</p>
+  <div *ngIf="images.length > 0" class="row justify-content-center mb-4">
+    <div class="col-12 text-center mt-3">
+          <app-image-gallery [images]="images" [currentPage]="currentPage"></app-image-gallery>
+    </div>
+  </div>
+</div>
+
+<div id="sectionTienda" class="container mt-5 mb-5 tienda">
+  <h2>{{Tienda}}</h2>
+  <p>Coming soon...</p>
+  <div class="card-body oculto">
+    <!-- src/app/card-grid/card-grid.component.html -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let image of imagesTienda">
+          <div class="card" [class.rotate]="rotatingImages[image.id]">
+              <img (click)="toggleRotation(image.id)"
+                  [src]="image.current_image"
+                  class="transition-img"
+                  alt="Shirt image"
+              />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

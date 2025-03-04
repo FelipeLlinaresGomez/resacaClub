@@ -1,0 +1,43 @@
+/* src/app/footer/footer.component.css */
+.footer {
+    background-color: #F05801;; /* Dark background color */
+    color: white; /* White text color */
+    padding: 1rem 0; /* Padding for top and bottom */
+  }
+
+  .footer h6 {
+    font-weight: bold; /* Bold text */
+    margin-bottom: 0.5rem; /* Space between title and content */
+  }
+  
+  .footer-icon {
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    margin-right: 0.5rem; /* Space between the icon and text */
+    vertical-align: middle; /* Align icon vertically in the middle of text */
+    filter: invert(100%) brightness(100%) grayscale(100%);
+  }
+
+  .footer .nav-link {
+    color: white; /* Default color */
+    text-decoration: none; /* Remove underline */
+    display: center; /* Ensure alignment of text and icons */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .footer .nav-link:hover {
+    color: #ffbe81; /* Change color on hover (light gray in this example) */
+    text-decoration: none; /* Ensure no underline on hover */
+  }
+
+  /* Custom styles for the dropdown toggle button */
+.custom-dropdown-toggle {
+  background-color: #F05801; /* Background color of the dropdown toggle button when closed */
+  color: white; /* Text color when closed */
+  border: none; /* Remove border if desired */
+}
+
+.custom-dropdown-toggle:hover, .custom-dropdown-toggle:focus {
+  background-color: #e45c00; /* Change to your desired hover color */
+  color: white; /* Text color on hover if needed */
+}

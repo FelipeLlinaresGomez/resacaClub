@@ -1,0 +1,30 @@
+.cookie-notice {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffbe81;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .cookie-notice p {
+    margin: 0;
+    display: inline-block;
+  }
+  
+  .cookie-notice button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .cookie-notice .nav-link:hover {
+    color: #F05801; /* Change color on hover (light gray in this example) */
+    text-decoration: none; /* Ensure no underline on hover */
+  }
+  

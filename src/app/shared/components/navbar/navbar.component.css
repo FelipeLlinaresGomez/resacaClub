@@ -1,0 +1,49 @@
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make sure the navbar spans the full width of the viewport */
+  z-index: 1000; /* Ensure it appears on top of other content */
+  background-color: white; /* Optional: set the background color to avoid transparency issues */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for a subtle effect */
+}
+
+/* Custom styling for the active nav-link */
+.nav-link.active {
+    font-weight: bold; /* Makes the text thicker */
+    color: #F05801; /* Changes text color to white */
+}
+
+/* Custom styling for the active nav-link */
+.nav-link {
+    font-weight: normal; /* Makes the text thicker */
+    color: #F05801; /* Changes text color to white */
+}
+
+/* Add margin to nav items for spacing */
+.navbar-nav .nav-item {
+    margin-left: 5px; /* Adjust as needed */
+    margin-bottom: 5px; /* Adjust as needed */
+}
+
+.navbar-toggler {
+  color: white;
+  border-color: white;
+  border-width: 2px;
+}
+
+.boton-toggler{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30'%3E%3Cpath stroke='rgba(240, 88, 1, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Custom styles for the dropdown toggle button */
+.custom-dropdown-toggle {
+  background-color: white; /* Background color of the dropdown toggle button when closed */
+  color: #F05801; /* Text color when closed */
+  border: none; /* Remove border if desired */
+}
+  
+.custom-dropdown-toggle:hover, .custom-dropdown-toggle:focus {
+  background-color: white; /* Change to your desired hover color */
+  color: white; /* Text color on hover if needed */
+}

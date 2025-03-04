@@ -1,0 +1,42 @@
+<!-- src/app/cookie-policy/cookie-policy.component.html -->
+<div class="container mt-5 privacidad">
+    <h2 class="mb-4">{{PoliticaPrivacidad}}</h2>
+    <h3>{{InformacionUsuario}}</h3>
+
+    <h4>{{ResponsableDatos}}</h4>
+    <p class="mb-4">{{ResponsableDatosDescripcion}}</p>
+  
+    <h4>{{PorqueDatos}}</h4>
+    <p>{{PorqueDatosDescripcion}}</p>
+    <ul class="mb-4">
+        <li>{{RemisionComunicaciones}}</li>
+        <li>{{RealizarEstudios}}</li>
+        <li>{{TramitarEncargos}}</li>
+        <li>{{RemitirBoletin}}</li>
+    </ul>
+
+    <h4>{{MotivoDatos}}</h4>
+    <p class="mb-4" [innerHTML]="MotivoDatosDescripcion"></p>
+
+    <h4>{{TiempoDatos}}</h4>
+    <p class="mb-4">{{TiempoDatosDescripcion}}</p>
+  
+    <h4>{{QuienDatos}}</h4>
+    <p class="mb-4">{{QuienDatosDescripcion}}</p>
+    
+    <h4>{{DerechosDatos}}</h4>
+    <p>{{DerechosDatosDescripcion}}</p>
+    <ul class="mb-4">
+        <li>{{DerechoRetirarConsentimiento}}</li>
+        <li>{{DerechoAcceso}}</li>
+        <li>{{DerechoReclamacion}}</li>
+    </ul>
+    <p>{{DatosContacto}}</p>
+    <p class="mb-4">E-mail: <a href="mailto:info@resacaclub.com">info&#64;resacaclub.com</a></p>
+
+    <h3>{{CaracterInformacion}}</h3>
+    <p class="mb-4">{{CaracterInformacionDescripcion}}</p>
+
+    <h3>{{MedidasSeguridad}}</h3>
+    <p class="mb-4" [innerHTML]="MedidasSeguridadDescripcion"></p>
+  </div>

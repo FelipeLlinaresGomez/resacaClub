@@ -1,0 +1,26 @@
+.privacidad{
+    margin-top: 30px;
+}
+
+.privacidad h2 {
+    color: #F05801;
+  }
+  
+.privacidad h3 {
+    color: #F05801;
+}
+
+.privacidad h4 {
+    color: #ffbe81;
+}
+
+.privacidad a {
+    font-size: 1rem;
+    color: #F05801; /* Optional: link color */
+    text-decoration: none;
+  }
+  
+.privacidad a:hover {
+    color: #ffbe81; /* Change color on hover (light gray in this example) */
+    text-decoration: none;
+}

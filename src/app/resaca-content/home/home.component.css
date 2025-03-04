@@ -1,0 +1,63 @@
+h1 {
+    color: #F05801;
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .home h2 {
+    margin-bottom: 5px;
+    color: #F05801;
+  }
+
+.tienda h2 {
+    margin-bottom: 5px;
+    color: #F05801;
+}
+
+.galeria h2 {
+  color: #F05801;
+  margin-bottom: 5px; /* Adjust the value as needed */
+}
+
+.tienda .transition-img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes horizontal-rotate {
+    0% {
+      transform: rotateY(0);
+    }
+    50% {
+      transform: rotateY(90deg);
+    }
+    50.1% {
+      transform: rotateY(-90deg);
+    }
+    100% {
+      transform: rotateY(0);
+    }
+  }
+  
+.rotate {
+    animation: horizontal-rotate 1s ease-in-out;
+}
+
+.galeria {
+  margin-top: 40px; /* Adjust the value as needed */
+}
+
+.galeria {
+  touch-action: pan-x pan-y;
+}
+
+.oculto{
+  display: none;
+}
+
+.video-player {
+  width: 100%; /* Full width */
+  max-height: 80vh; /* Full viewport height */
+  object-fit: cover; /* Stretch to fill without preserving aspect ratio */
+}
